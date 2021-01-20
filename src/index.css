@@ -5,9 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.prev, .next {
+  cursor: pointer;
+  padding: 1rem;
+  background: none;
+  border: none;
+}
+
+.prev:hover, .next:hover {
+  color: green;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.apod > h3 {
+  font-size: 2rem;
+}
+
+.apod > img {
+  border-radius: 1rem;
+  box-shadow: 3px 3px 5px #aaa;
+  height: 50rem;
+  max-width: 850px;
+}
+
+.apod > p {
+  font-size: 1.1rem;
+  width: 80%;
+  margin: 3rem auto;
+  padding: 2%;
+  background-color: #fafafa;
+  border: solid 1px #eee;
+  border-radius: 0.7rem;
+  max-width: 600px;
+  text-align: justify;
+  box-shadow: 2px 2px 5px #ccc;
 }
