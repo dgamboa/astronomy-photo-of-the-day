@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Apod(props) {
+export default function Image(props) {
   const { title, date, img, explanation, imgLink } = props;
   
   return (
