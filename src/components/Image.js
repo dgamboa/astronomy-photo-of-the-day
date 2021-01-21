@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import Description from './Description'
 
 const ImageSection = styled.section`
   /* border: solid 1px black; Delete */
@@ -12,6 +13,9 @@ const ImageSection = styled.section`
     display: flex;
     justify-content: space-between;
     h3 {
+      color: #eee;
+      cursor: pointer;
+      font-weight: 300;
       font-family: Roboto;
       font-size: 2.5rem;
       line-height: 1rem;
@@ -20,26 +24,32 @@ const ImageSection = styled.section`
   }
 
   img {
-    border: solid 1px black; /* Delete */
     max-height: 100%;
     max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #222;
   }
 `;
 
 export default function Image(props) {
   const { title, date, img, explanation, imgLink } = props;
   
+  const [collapsedDesc, setCollapsedDesc] = useState(true);
+
   return (
     <ImageSection className="image-container">
       <div className="image-header">
-        <h3 className="title">Some title to be API</h3>
+        <h3 className="title" onClick={() => setCollapsedDesc(!collapsedDesc)}>
+          Some title to be API
+          {collapsedDesc 
+            ? ` ${String.fromCharCode(9662)}`
+            : ` ${String.fromCharCode(9652)}`}
+        </h3>
         <h3 className="date">2021-01-21</h3>
       </div>
+      <Description explanation={explanation} collapsedDesc={collapsedDesc}/>
       <div className="image">
         <img src="https://apod.nasa.gov/apod/image/2101/M78wideHiggins1024.jpg" alt=""/>
-      </div>
-      <div className="description">
-
       </div>
     </ImageSection>
   )
