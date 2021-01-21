@@ -16,24 +16,24 @@ function App() {
   const [explanation, setExplanation] = useState('');
   const [imgLink, setImgLink] = useState('');
 
-  useEffect(() => {
-    const fetchImage = () => {
-      axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${date}`)
-        .then(res => {
-          console.log(res);
-          setTitle(res.data.title);
-          setDate(res.data.date);
-          setImg(res.data.url);
-          setExplanation(res.data.explanation);
-          setImgLink(res.data.hdurl);
-        })
-        .catch(err => {
-          console.log(err);
-          debugger
-        })
-    }
-    fetchImage();
-  }, [date])
+  // useEffect(() => {
+  //   const fetchImage = () => {
+  //     axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${date}`)
+  //       .then(res => {
+  //         console.log(res);
+  //         setTitle(res.data.title);
+  //         setDate(res.data.date);
+  //         setImg(res.data.url);
+  //         setExplanation(res.data.explanation);
+  //         setImgLink(res.data.hdurl);
+  //       })
+  //       .catch(err => {
+  //         console.log(err);
+  //         debugger
+  //       })
+  //   }
+  //   fetchImage();
+  // }, [date])
 
   const prevDate = () => {
     let dateObj = new Date(date);
@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <div className="container">
+      {/* <div className="container">
         <button className="prev" onClick={prevDate}>&#9668; Prev</button>
         <Image
           title={title}
@@ -69,7 +69,7 @@ function App() {
           imgLink={imgLink}
         />
         <button className="next" onClick={nextDate}>Next &#9658;</button>
-      </div>
+      </div> */}
     </div>
   );
 }
