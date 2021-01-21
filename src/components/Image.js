@@ -40,16 +40,18 @@ export default function Image(props) {
     <ImageSection className="image-container">
       <div className="image-header">
         <h3 className="title" onClick={() => setCollapsedDesc(!collapsedDesc)}>
-          Some title to be API
+          {title}
           {collapsedDesc 
             ? ` ${String.fromCharCode(9662)}`
             : ` ${String.fromCharCode(9652)}`}
         </h3>
-        <h3 className="date">2021-01-21</h3>
+        <h3 className="date">{date}</h3>
       </div>
       <Description explanation={explanation} collapsedDesc={collapsedDesc}/>
       <div className="image">
-        <img src="https://apod.nasa.gov/apod/image/2101/M78wideHiggins1024.jpg" alt=""/>
+        <a href={imgLink}>
+          <img src={img} alt={title}/>
+        </a>
       </div>
     </ImageSection>
   )
