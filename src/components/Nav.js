@@ -22,9 +22,14 @@ const StyledHeader = styled.header`
     padding: 0 2rem;
   }
 
+  .page-title {
+    /* box-shadow: inset 0 0 12px #111; */
+  }
+
   h1 {
     font-size: 4.2rem;
     line-height: 1rem;
+    color: #eee;
   }
 
   h2 {
@@ -32,6 +37,7 @@ const StyledHeader = styled.header`
     font-style: italic;
     line-height: 1rem;
     padding: 0 3rem;
+    color: #ccc;
   }
 `;
 
