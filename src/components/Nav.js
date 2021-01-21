@@ -29,12 +29,13 @@ const StyledHeader = styled.header`
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 4.2rem;
     line-height: 1rem;
   }
 
   h2 {
     font-size: 2.5rem;
+    font-style: italic;
     line-height: 1rem;
     padding: 0 3rem;
   }
