@@ -59,17 +59,15 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      {/* <div className="container">
-        <button className="prev" onClick={prevDate}>&#9668; Prev</button>
-        <Image
-          title={title}
-          date={date}
-          img={img}
-          explanation={explanation}
-          imgLink={imgLink}
-        />
-        <button className="next" onClick={nextDate}>Next &#9658;</button>
-      </div> */}
+      {/* <button className="prev" onClick={prevDate}>&#9668; Prev</button> */}
+      <Image
+        title={title}
+        date={date}
+        img={img}
+        explanation={explanation}
+        imgLink={imgLink}
+      />
+      {/* <button className="next" onClick={nextDate}>Next &#9658;</button> */}
     </div>
   );
 }

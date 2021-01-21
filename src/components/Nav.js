@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledHeader = styled.header`
-  border: solid 1px black; /* Delete */
-  border-bottom: solid 1px #555;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,14 +17,9 @@ const StyledHeader = styled.header`
   }
 
   .logo > img {
-    border: solid 1px black; /* Delete */
     max-height: 100%;
     max-width: 100%;
     padding: 0 2rem;
-  }
-
-  .page-title {
-    border: solid 1px black; /* Delete */
   }
 
   h1 {
