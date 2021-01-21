@@ -3,7 +3,7 @@ import axios from 'axios'
 import { BASE_URL } from './constants/base_url'
 import { API_KEY } from './constants/api_key'
 import Nav from './components/Nav'
-import Apod from './components/Apod'
+import Image from './components/Image'
 import "./App.css";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   const [imgLink, setImgLink] = useState('');
 
   useEffect(() => {
-    const fetchApod = () => {
+    const fetchImage = () => {
       axios.get(`${BASE_URL}?api_key=${API_KEY}&date=${date}`)
         .then(res => {
           console.log(res);
@@ -32,7 +32,7 @@ function App() {
           debugger
         })
     }
-    fetchApod();
+    fetchImage();
   }, [date])
 
   const prevDate = () => {
@@ -61,7 +61,7 @@ function App() {
       <Nav />
       <div className="container">
         <button className="prev" onClick={prevDate}>&#9668; Prev</button>
-        <Apod
+        <Image
           title={title}
           date={date}
           img={img}
