@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import { BASE_URL } from './constants/base_url'
 import { API_KEY } from './constants/api_key'
+import Nav from './components/Nav'
 import Apod from './components/Apod'
 import "./App.css";
 
@@ -12,8 +13,8 @@ function App() {
   const [title, setTitle] = useState('');
   const [date, setDate] = useState(initialDate);
   const [img, setImg] = useState('');
-  const [imgAlt, setImgAlt] = useState('');
   const [explanation, setExplanation] = useState('');
+  const [imgLink, setImgLink] = useState('');
 
   useEffect(() => {
     const fetchApod = () => {
@@ -23,8 +24,8 @@ function App() {
           setTitle(res.data.title);
           setDate(res.data.date);
           setImg(res.data.url);
-          setImgAlt(res.data.title);
           setExplanation(res.data.explanation);
+          setImgLink(res.data.hdurl);
         })
         .catch(err => {
           console.log(err);
@@ -57,15 +58,18 @@ function App() {
 
   return (
     <div className="App">
-      <button className="prev" onClick={prevDate}>&#9668; Prev</button>
-      <Apod
-        title={title}
-        date={date}
-        img={img}
-        imgAlt={imgAlt}
-        explanation={explanation}
-      />
-      <button className="next" onClick={nextDate}>Next &#9658;</button>
+      <Nav />
+      <div className="container">
+        <button className="prev" onClick={prevDate}>&#9668; Prev</button>
+        <Apod
+          title={title}
+          date={date}
+          img={img}
+          explanation={explanation}
+          imgLink={imgLink}
+        />
+        <button className="next" onClick={nextDate}>Next &#9658;</button>
+      </div>
     </div>
   );
 }

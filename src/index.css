@@ -13,6 +13,28 @@ code {
     monospace;
 }
 
+.nav {
+  height: 8rem;
+  background-color: #eee;
+  border-bottom: 1px solid eee;
+  box-shadow: 0px 2px 2px #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-home-link {
+  font-size: 2rem;
+  font-style: italic;
+  padding: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+img.nasa-logo {
+  width: 15rem;
+}
+
 .prev, .next {
   cursor: pointer;
   padding: 1rem;
@@ -24,7 +46,7 @@ code {
   color: green;
 }
 
-.App {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +62,7 @@ code {
   font-size: 2rem;
 }
 
-.apod > img {
+img.apod-image {
   border-radius: 1rem;
   box-shadow: 3px 3px 5px #aaa;
   height: 50rem;
