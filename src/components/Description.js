@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledDescription = styled.div`
-  background-color: #333b33;
+  background-color: #2e302e;
   border-radius: 4px;
   box-shadow: inset 0 0 10px #111;
   box-sizing: border-box;
