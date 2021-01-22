@@ -8,7 +8,11 @@ import "./App.css";
 
 function App() {
   const today = new Date();
-  const initialDate = today.toISOString().split('T')[0];
+  const year = today.getFullYear();
+  const month = today.getMonth().toString().length < 2 ? `0${today.getMonth() + 1}` : today.getMonth();
+  const day = today.getDate().toString().length < 2 ? `0${today.getDate()}` : today.getDate();
+
+  const initialDate = `${year}-${month}-${day}`
 
   const [title, setTitle] = useState('');
   const [date, setDate] = useState(initialDate);
