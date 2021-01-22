@@ -37,7 +37,7 @@ function App() {
           debugger
         })
     }
-    // fetchImage();
+    fetchImage();
   }, [date])
 
   const prevDate = () => {
@@ -64,17 +64,19 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      {/* <button className="prev" onClick={prevDate}>&#9668; Prev</button> */}
+      
       <Image
         title={title}
         date={date}
         img={img}
         explanation={explanation}
         imgLink={imgLink}
+        prevDate={prevDate}
+        nextDate={nextDate}
       />
-      {/* <button className="next" onClick={nextDate}>Next &#9658;</button> */}
+      
       <Footer />
-      <a href="https://github.com/dgamboa/nasa-photo-of-the-day/tree/daniel-gamboa"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" /></a>
+      <a href="https://github.com/dgamboa/nasa-photo-of-the-day/tree/daniel-gamboa"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149" className="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" /></a>
     </div>
   );
 }
