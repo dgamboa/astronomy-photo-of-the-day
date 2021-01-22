@@ -4,6 +4,7 @@ import { BASE_URL } from './constants/base_url'
 import { API_KEY } from './constants/api_key'
 import Nav from './components/Nav'
 import Image from './components/Image'
+import Footer from './components/Footer'
 import "./App.css";
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
           debugger
         })
     }
-    fetchImage();
+    // fetchImage();
   }, [date])
 
   const prevDate = () => {
@@ -72,6 +73,8 @@ function App() {
         imgLink={imgLink}
       />
       {/* <button className="next" onClick={nextDate}>Next &#9658;</button> */}
+      <Footer />
+      <a href="https://github.com/dgamboa/nasa-photo-of-the-day/tree/daniel-gamboa"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1" /></a>
     </div>
   );
 }

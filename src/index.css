@@ -18,71 +18,8 @@ code {
     monospace;
 }
 
-/* .nav {
-  height: 8rem;
-  background-color: #eee;
-  border-bottom: 1px solid eee;
-  box-shadow: 0px 2px 2px #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.attachment-full {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-
-.site-home-link {
-  font-size: 2rem;
-  font-style: italic;
-  padding: 2rem;
-  text-decoration: none;
-  color: black;
-}
-
-img.nasa-logo {
-  width: 15rem;
-}
-
-.prev, .next {
-  cursor: pointer;
-  padding: 1rem;
-  background: none;
-  border: none;
-}
-
-.prev:hover, .next:hover {
-  color: green;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.apod {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.apod > h3 {
-  font-size: 2rem;
-}
-
-img.apod-image {
-  border-radius: 1rem;
-  box-shadow: 3px 3px 5px #aaa;
-  height: 50rem;
-  max-width: 850px;
-}
-
-.apod > p {
-  font-size: 1.1rem;
-  width: 80%;
-  margin: 3rem auto;
-  padding: 2%;
-  background-color: #fafafa;
-  border: solid 1px #eee;
-  border-radius: 0.7rem;
-  max-width: 600px;
-  text-align: justify;
-  box-shadow: 2px 2px 5px #ccc;
-} */
