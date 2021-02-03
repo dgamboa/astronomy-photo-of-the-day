@@ -4,6 +4,8 @@ This is a simple, single-page-application to display [NASA's astronomy photo of 
 
 **[Link to live app](https://nasa-apod-site.netlify.app/)**
 
+![App Preview Screenshot](./public/assets/AppPreview.png)
+
 ## Techonology Stack
 
 - The underlying technologies are JavaScript, HTML and CSS
