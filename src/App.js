@@ -40,7 +40,8 @@ function App() {
     fetchImage();
   }, [date])
 
-  const prevDate = () => {
+  const prevDate = (e) => {
+    e.target.blur();
     let dateObj = new Date(date);
     dateObj.setDate(dateObj.getDate() - 1);
     const newDate = dateObj.toISOString().split('T')[0];
@@ -49,6 +50,7 @@ function App() {
   }
 
   const nextDate = (e) => {
+    e.target.blur();
     if (date === initialDate) {
       e.preventDefault();
       console.log("Already showing the latest picture!")
@@ -68,6 +70,7 @@ function App() {
       <Image
         title={title}
         date={date}
+        initialDate={initialDate}
         img={img}
         explanation={explanation}
         imgLink={imgLink}
