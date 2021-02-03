@@ -63,11 +63,17 @@ const ImageSection = styled.section`
     }
   }
 
-  img {
+  img, iframe {
+    border: none;
     border-radius: 4px;
     box-shadow: 0 0 10px #222;
     max-width: 100%;
     max-height: 100%;
+  }
+
+  iframe {
+    height: 530px;
+    width: 100%;
   }
 
   @media (max-width: 950px) {
@@ -75,6 +81,9 @@ const ImageSection = styled.section`
       h3, h4 {
         font-size: 1.5rem;
       }
+    }
+    iframe {
+      height: 400px;
     }
   }
 
@@ -90,6 +99,9 @@ const ImageSection = styled.section`
       h3 {
         margin-bottom: 1rem;
       }
+    }
+    iframe {
+      height: 315px;
     }
   }
 
@@ -107,10 +119,24 @@ const ImageSection = styled.section`
       padding: 2rem 0.5rem;
     }
   }
+
+  @media (max-width: 450px) {
+    iframe {
+      height: 100%;
+    }
+  }
 `;
 
 export default function Image(props) {
-  const { title, date, initialDate, img, explanation, imgLink, prevDate, nextDate } = props;
+  const { title,
+          date,
+          initialDate,
+          img,
+          explanation,
+          imgLink,
+          mediaType,
+          prevDate,
+          nextDate } = props;
   
   const [collapsedDesc, setCollapsedDesc] = useState(true);
 
@@ -130,9 +156,18 @@ export default function Image(props) {
       
       <div className="image">
         <button className="prev" onClick={prevDate}>&#9668;</button>
-        <a href={imgLink}>
-          <img src={img} alt={title}/>
-        </a>
+        {
+          mediaType === 'image' &&
+          <a href={imgLink}>
+            <img src={img} alt={title}/>
+          </a>
+        }
+        {
+          mediaType === 'video' &&
+          <a href={img}>
+            <iframe src={img} title={title}/>
+          </a>
+        }
         {
           date !== initialDate &&
           <button className="next" onClick={nextDate}>&#9658;</button>
