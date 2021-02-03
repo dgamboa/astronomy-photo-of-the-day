@@ -20,6 +20,7 @@ function App() {
   const [img, setImg] = useState('');
   const [explanation, setExplanation] = useState('');
   const [imgLink, setImgLink] = useState('');
+  const [mediaType, setMediaType] = useState('image');
 
   useEffect(() => {
     const fetchImage = () => {
@@ -31,6 +32,7 @@ function App() {
           setImg(res.data.url);
           setExplanation(res.data.explanation);
           setImgLink(res.data.hdurl);
+          setMediaType(res.data.media_type);
         })
         .catch(err => {
           console.log(err);
@@ -40,7 +42,8 @@ function App() {
     fetchImage();
   }, [date])
 
-  const prevDate = () => {
+  const prevDate = (e) => {
+    e.target.blur();
     let dateObj = new Date(date);
     dateObj.setDate(dateObj.getDate() - 1);
     const newDate = dateObj.toISOString().split('T')[0];
@@ -49,6 +52,7 @@ function App() {
   }
 
   const nextDate = (e) => {
+    e.target.blur();
     if (date === initialDate) {
       e.preventDefault();
       console.log("Already showing the latest picture!")
@@ -68,9 +72,11 @@ function App() {
       <Image
         title={title}
         date={date}
+        initialDate={initialDate}
         img={img}
         explanation={explanation}
         imgLink={imgLink}
+        mediaType={mediaType}
         prevDate={prevDate}
         nextDate={nextDate}
       />

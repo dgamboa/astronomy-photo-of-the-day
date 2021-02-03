@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   font-size: 1.5rem;
   margin: 0 auto;
   padding: 3rem 0;
-  width: 75%;
+  width: 80%;
   max-width: 80rem;
   .left-footer {
     flex: 1 1 0;
@@ -31,6 +31,13 @@ const StyledFooter = styled.footer`
     &:hover {
       color: #dd361c;
       text-shadow: 0 0 10px #061f4a;
+    }
+  }
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    a {
+      line-height: 3rem;
     }
   }
 `;
