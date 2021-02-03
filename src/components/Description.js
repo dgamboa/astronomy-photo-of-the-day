@@ -15,7 +15,12 @@ const StyledDescription = styled.div`
     text-align: justify;
     font-size: 1.8rem;
     font-weight: 700;
-    
+  }
+
+  @media (max-width: 950px) {
+    p {
+      font-size: 1.3rem;
+    }
   }
 `;
 

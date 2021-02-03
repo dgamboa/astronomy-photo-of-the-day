@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   align-items: center;
   height: 15rem;
   margin: 0 auto;
-  width: 75%;
+  width: 80%;
   max-width: 80rem;
 
   .logo {
@@ -20,10 +20,6 @@ const StyledHeader = styled.header`
     max-height: 100%;
     max-width: 100%;
     padding: 0 2rem;
-  }
-
-  .page-title {
-    /* box-shadow: inset 0 0 12px #111; */
   }
 
   h1 {
@@ -38,6 +34,19 @@ const StyledHeader = styled.header`
     line-height: 1rem;
     padding: 0 3rem;
     color: #ccc;
+  }
+
+  @media (max-width: 620px) {
+    flex-direction: column;
+    height: auto;
+    .logo > img {
+      padding: 0;
+      margin: 3rem 0 2rem;
+    }
+    h2 {
+      margin-bottom: 3.5rem;
+      font-size: 2.2rem;
+    }
   }
 `;
 
