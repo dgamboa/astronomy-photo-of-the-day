@@ -28,7 +28,10 @@ export default function Description(props) {
   const { explanation, collapsedDesc } = props;
   
   return (
-    <StyledDescription className="description" collapsedDesc={collapsedDesc}>
+    <StyledDescription
+      className="description"
+      collapsedDesc={collapsedDesc}
+    >
       <p>{explanation}</p>
     </StyledDescription>
   )

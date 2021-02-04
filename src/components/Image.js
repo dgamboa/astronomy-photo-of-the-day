@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Description from './Description'
 
 const ImageSection = styled.section`
-  /* border: solid 1px black; Delete */
   border-top: 1px solid rgba(255,255,255,0.08);
   border-bottom: 1px solid rgba(0,0,0,0.5);
   margin: 0 auto;
@@ -143,7 +142,9 @@ export default function Image(props) {
   return (
     <ImageSection className="image-container">
       <div className="image-header">
-        <h3 className="title" onClick={() => setCollapsedDesc(!collapsedDesc)}>
+        <h3 className="title"
+            onClick={() => setCollapsedDesc(!collapsedDesc)}
+        >
           {title}
           {collapsedDesc 
             ? ` ${String.fromCharCode(9662)}`

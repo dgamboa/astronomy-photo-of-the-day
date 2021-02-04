@@ -5,7 +5,6 @@ import { API_KEY } from './constants/api_key'
 import Nav from './components/Nav'
 import Image from './components/Image'
 import Footer from './components/Footer'
-import "./App.css";
 
 function App() {
   const today = new Date();

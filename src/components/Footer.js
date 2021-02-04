@@ -54,7 +54,9 @@ export default function Footer(props) {
         </a>
       </div>
       <div className="right-footer">
-        <a href="https://apod.nasa.gov/apod/lib/about_apod.html#srapply">Copyright &copy;</a>
+        <a href="https://apod.nasa.gov/apod/lib/about_apod.html#srapply">
+          Copyright &copy;
+        </a>
       </div>
     </StyledFooter>
   )
