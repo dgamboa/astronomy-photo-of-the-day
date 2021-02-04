@@ -16,10 +16,12 @@ This is a simple, single-page-application to display [NASA's astronomy photo of 
 
 ## Developer Instructions
 
-- [ ] Create a forked copy of this project.
+- [ ] Create a forked copy of this project
 - [ ] Clone a version to your local repository
 - [ ] Download project dependencies by running `npm install` in your terminal
-- [ ] Start up the app using `npm start`
+- [ ] Start up the app locally using `npm start`
+- [ ] Happy hacking!
+- [ ] When you're ready, share it or pull request me
 
 *For feedback or contributions please submit a pull request or DM me*
 
