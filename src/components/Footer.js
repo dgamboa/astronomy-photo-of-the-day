@@ -49,7 +49,7 @@ export default function Footer(props) {
         <a href="https://apod.nasa.gov/apod/astropix.html">NASA APOD</a>
       </div>
       <div className="middle-footer">
-        <a href="https://github.com/dgamboa/nasa-photo-of-the-day/tree/daniel-gamboa">
+        <a href="https://github.com/dgamboa/astronomy-photo-of-the-day">
           <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>
